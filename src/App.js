@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import { MyContext } from "./context/Context";
+import StageOne from "./comps/StageOne";
+import StageTwo from "./comps/StageTwo";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "react-bootstrap/Card";
+import "./style/app.css";
 
-function App() {
+const App = () => {
+  const context = useContext(MyContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        background: "linear-gradient(18deg, red, orange)",
+      }}
+      className="wrapper"
+    >
+      <div className="center-wrapper">
+        <Card style={{ width: "100%" }}>
+          <Card.Body>
+            <Card.Title
+              style={{
+                fontFamily: "Pacifico, cursive",
+                color: "#db3eb1",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              Let's see
+            </Card.Title>
+            <Card.Text>
+              <div className="">
+                <div className="">
+                  <h1>Who Pays The Bill ?</h1>
+                  {context.state.stage === 1 ? <StageOne /> : <StageTwo />}
+                </div>
+              </div>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
     </div>
   );
-}
-
+};
 export default App;
