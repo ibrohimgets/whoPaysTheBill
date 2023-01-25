@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/whoPaysTheBill/static/css/main.df4472e4.css",
+    "main.js": "/whoPaysTheBill/static/js/main.fb8c320a.js",
+    "index.html": "/whoPaysTheBill/index.html",
+    "main.df4472e4.css.map": "/whoPaysTheBill/static/css/main.df4472e4.css.map",
+    "main.fb8c320a.js.map": "/whoPaysTheBill/static/js/main.fb8c320a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df4472e4.css",
+    "static/js/main.fb8c320a.js"
+  ]
+}
